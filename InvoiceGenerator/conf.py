@@ -13,7 +13,7 @@ def get_gettext(lang):
     t = gettext.translation(
         'messages',
         path,
-        languages='nl',
+        languages=[lang],
         codeset='utf8',
         fallback=True,
     )
