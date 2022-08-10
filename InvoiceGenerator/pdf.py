@@ -247,7 +247,7 @@ class SimpleInvoice(BaseInvoice):
         lines = [
             self.invoice.provider.bank_name,
             '%s: %s' % (_(u'Account n.'), self.invoice.provider.bank_account_str()),
-            '%s: %s' % (_(u'Purchase Order'),self.address.purchase_order.splitlines, default),
+            '%s: %s' % (_(u'Purchase Order'),self.invoice.purchase_order),
         ]
         if self.invoice.variable_symbol:
             lines.append(

@@ -40,16 +40,15 @@ class Address(UnicodeProperty):
     :param ir: Taxpayer identification Number (IČO in czech)
     :param logo_filename: path to the image of logo of the company
     :param country: country
-    :param purchase_order: purchase order
     """
     _attrs = ('summary', 'address', 'city', 'zip_code', 'phone', 'email',
               'bank_name', 'bank_account', 'bank_code', 'note', 'vat_id', 'ir',
-              'logo_filename', 'vat_note', 'country', 'division', 'purchase_order')
+              'logo_filename', 'vat_note', 'country', 'division',)
 
     def __init__(
         self, summary, address='', zip_code='', city='', phone='', email='',
         bank_name='', bank_account='', bank_code='', note='', vat_id='', ir='',
-        logo_filename='', vat_note='', country='', division='', purchase_order='',
+        logo_filename='', vat_note='', country='', division='',
     ):
         self.summary = summary
         self.address = address
@@ -65,7 +64,6 @@ class Address(UnicodeProperty):
         self.note = note
         self.vat_id = vat_id
         self.vat_note = vat_note
-        self.purchase_order = purchase_order
         self.ir = ir
         self.logo_filename = logo_filename
 
@@ -244,6 +242,8 @@ class Invoice(UnicodeProperty):
     currency_locale = "cs_CZ.UTF-8"
     #: currency identifier (e.g. "$" or "Kč")
     currency = u"Kč"
+    #: purchase order
+    purchase_order = None
 
     use_tax = False
 
