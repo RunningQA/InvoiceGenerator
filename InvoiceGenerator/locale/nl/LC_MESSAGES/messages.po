@@ -166,7 +166,7 @@ msgstr "Reden voor creditnota: %s"
 
 #: pdf.py:463
 msgid "Date of exposure"
-msgstr "Datum vystavení"
+msgstr "Datum Creditnota"
 
 msgid "Document num.: %s"
 msgstr "Documentnummer: %s"
