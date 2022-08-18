@@ -245,7 +245,9 @@ class Invoice(UnicodeProperty):
     #: purchase order
     purchase_order = None
     #: original invoice number
-    origina = None
+    original = None
+    #: reason for correction invoice
+    reason = None
 
     use_tax = False
 
@@ -259,6 +261,7 @@ class Invoice(UnicodeProperty):
     rounding_strategy = decimal.ROUND_HALF_EVEN
 
     def __init__(self, client, provider, creator):
+        self.reason = None
         assert isinstance(client, Client)
         assert isinstance(provider, Provider)
         assert isinstance(creator, Creator)
@@ -341,7 +344,7 @@ class Correction(Invoice):
     Correcting invoice
     """
     _attrs = ('number', 'reason', 'title', 'variable_symbol', 'specific_symbol', 'paytype',
-              'date', 'payback', 'taxable_date', 'original')
+              'date', 'payback', 'taxable_date', 'original',)
 
     def __init__(self, client, provider, creator):
         super(Correction, self).__init__(client, provider, creator)
