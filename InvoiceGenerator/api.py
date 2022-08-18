@@ -244,6 +244,8 @@ class Invoice(UnicodeProperty):
     currency = u"Kč"
     #: purchase order
     purchase_order = None
+    #: original invoice number
+    origina = None
 
     use_tax = False
 
