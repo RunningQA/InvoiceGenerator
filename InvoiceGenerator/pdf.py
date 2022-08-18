@@ -539,7 +539,7 @@ class CorrectingInvoice(SimpleInvoice):
 
     def drawCorretion(self, TOP, LEFT):
         self.pdf.setFont('DejaVu', 8)
-        self.pdf.drawString(LEFT * mm, TOP * mm, _(u'Correction document for invoice: %s') % self.invoice.number)
+        self.pdf.drawString(LEFT * mm, TOP * mm, _(u'Correction document for invoice: %s') % self.invoice.original)
         self.pdf.drawString(LEFT * mm, (TOP - 4) * mm, _(u'Reason to correction: %s') % self.invoice.reason)
 
 

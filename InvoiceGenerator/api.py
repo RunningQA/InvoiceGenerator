@@ -339,7 +339,7 @@ class Correction(Invoice):
     Correcting invoice
     """
     _attrs = ('number', 'reason', 'title', 'variable_symbol', 'specific_symbol', 'paytype',
-              'date', 'payback', 'taxable_date')
+              'date', 'payback', 'taxable_date', 'original')
 
     def __init__(self, client, provider, creator):
         super(Correction, self).__init__(client, provider, creator)
