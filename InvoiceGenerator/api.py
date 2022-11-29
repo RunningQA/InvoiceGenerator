@@ -244,11 +244,13 @@ class Invoice(UnicodeProperty):
     currency = u"Kč"
     #: purchase order
     purchase_order = None
+    #: coding string
+    coding_string = None
     #: original invoice number
     original = None
     #: reason for correction invoice
     reason = None
-
+    #: use tax in invoice?
     use_tax = False
 
     #: round result to integers?

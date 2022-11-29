@@ -249,6 +249,10 @@ class SimpleInvoice(BaseInvoice):
             '%s: %s' % (_(u'Account n.'), self.invoice.provider.bank_account_str()),
             '%s: %s' % (_(u'Purchase Order'),self.invoice.purchase_order),
         ]
+        if self.invoice.coding_string:
+            lines.append(
+                '%s: %s' % (_(u'Coding String'), self.invoice.coding_string),
+            )
         if self.invoice.variable_symbol:
             lines.append(
                 '%s: %s' % (_(u'Variable symbol'), self.invoice.variable_symbol),
