@@ -247,8 +247,11 @@ class SimpleInvoice(BaseInvoice):
         lines = [
             self.invoice.provider.bank_name,
             '%s: %s' % (_(u'Account n.'), self.invoice.provider.bank_account_str()),
-            '%s: %s' % (_(u'Purchase Order'),self.invoice.purchase_order),
         ]
+        if self.invoice.purchase_order:
+            lines.append(
+                '%s: %s' % (_(u'Purchase Order'), self.invoice.purchase_order),
+            )
         if self.invoice.coding_string:
             lines.append(
                 '%s: %s' % (_(u'Coding String'), self.invoice.coding_string),
