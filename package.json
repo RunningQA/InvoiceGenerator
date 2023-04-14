@@ -1,0 +1,23 @@
+{
+  "name": "@runningqa/invoicegenerator",
+  "version": "1.1.1",
+  "description": "Generate PDF invoices",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RunningQA/InvoiceGenerator.git"
+  },
+  "author": "Jean Delissen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RunningQA/InvoiceGenerator/issues"
+  },
+  "homepage": "https://github.com/RunningQA/InvoiceGenerator#readme"
+}
