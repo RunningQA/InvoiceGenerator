@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/RunningQA/InvoiceGenerator/issues"
   },
-  "homepage": "https://github.com/RunningQA/InvoiceGenerator#readme"
+  "homepage": "https://github.com/RunningQA/InvoiceGenerator#readme",
+  "publishConfig": {
+   "@runningqa:registry": "https://npm.pkg.github.com"
+ }
 }
