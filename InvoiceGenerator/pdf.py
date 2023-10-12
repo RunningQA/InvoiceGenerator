@@ -256,6 +256,10 @@ class SimpleInvoice(BaseInvoice):
             lines.append(
                 '%s: %s' % (_(u'Coding String'), self.invoice.coding_string),
             )
+        if self.invoice.text:
+            lines.append(
+                '%s: %s' % (_(u'Additional Text'), self.invoice.text),
+            )
         if self.invoice.variable_symbol:
             lines.append(
                 '%s: %s' % (_(u'Variable symbol'), self.invoice.variable_symbol),

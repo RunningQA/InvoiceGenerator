@@ -250,6 +250,8 @@ class Invoice(UnicodeProperty):
     original = None
     #: reason for correction invoice
     reason = None
+    #: additional info text
+    text = None
     #: use tax in invoice?
     use_tax = False
 
